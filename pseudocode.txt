@@ -1,0 +1,39 @@
+Program "Sistem Kasir"
+
+BEGIN
+WRITE "Input kode barang:"
+READ kodebarang
+
+IF kodebarang = 1 THEN
+    Namabarang = "Coca-cola"
+    Harga = 5000
+ELSE IF kodebarang = 2 THEN
+    Namabarang = "Aqua"
+    Harga = 3000
+ELSE IF kodebarang = 3 THEN
+    Namabarang = "Mizone"
+    Harga = 6000
+ELSE
+    WRITE "Kode barang tidak valid"
+END IF
+
+READ jumlah_barang
+total_pembayaran = Harga * jumlah_barang
+
+WRITE "Total harga: Rp" + total_pembayaran
+WRITE "Masukkan uang yang dibayar:"
+TUNAI = READ input from user
+
+kembali = TUNAI - total_pembayaran
+
+WRITE "Kembalian uang: Rp" + kembali
+READ kembali
+
+WRITE("Output");
+WRITE("Kode barang: " + kodebarang);
+WRITE("Nama barang: " + Namabarang);
+WRITE("Harga: " + Harga);
+WRITE("Jumlah: " + jumlahbarang);
+WRITE("Total harga: " + (Harga * jumlahbarang));
+WRITE("Tunai: " + TUNAI);
+WRITE("Kembali: " + kembali);
